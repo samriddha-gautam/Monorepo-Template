@@ -1,15 +1,13 @@
 # app
 
-To install dependencies:
+This is a monorepo template built for creating webapps. Uses bun as the runtime with hono server. 
 
-```bash
+## Steps 
+1. Clone the repository
+2. Then run the following command:
+
+``` 
 bun install
 ```
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.4.2. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+3. If any of the dependencies are missing add them with  `bun add <dependency-name>` 
