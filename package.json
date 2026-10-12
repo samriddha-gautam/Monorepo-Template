@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bunx concurrently -n web,api \"bun run dev:web\" \"bun run dev:api\"",
+    "dev:web": "bun --bun run --cwd packages/frontend dev",
+    "dev:api": "bun --hot packages/api/src/dev.ts",
+    "build": "bun run --cwd packages/frontend build",
+    "typecheck": "tsc -b",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "test": "bun test",
+    "db:generate": "drizzle-kit generate --config packages/db/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config packages/db/drizzle.config.ts",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "concurrently": "^10.0.6",
+    "drizzle-kit": "^0.31.11",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "oxlint": "^1.87.0",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2"
+  }
+}
