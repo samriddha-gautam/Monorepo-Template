@@ -1,4 +1,4 @@
-# app
+# Monorepo Template
 
 This is a monorepo template built for creating webapps. Uses bun as the runtime with hono server. 
 
