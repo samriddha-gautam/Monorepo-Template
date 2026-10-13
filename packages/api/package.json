@@ -1,3 +1,6 @@
 {
-  "name":"@monorepo-template/api"
+  "name": "@monorepo-template/api",
+  "dependencies": {
+    "@app/types": "workspace:*"
+  }
 }
