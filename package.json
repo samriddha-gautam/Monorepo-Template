@@ -5,6 +5,7 @@
   ],
   "scripts": {
     "add:types": "bun add --cwd packages/types",
+    "add:db": "bun add --cwd packages/db",
     "dev": "bunx concurrently -n web,api \"bun run dev:web\" \"bun run dev:api\"",
     "dev:web": "bun --bun run --cwd packages/frontend dev",
     "dev:api": "bun --hot packages/api/src/dev.ts",
