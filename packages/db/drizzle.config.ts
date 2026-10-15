@@ -7,12 +7,11 @@ if (!url) {
   throw new Error("DIRECT_URL environment variable is required");
 }
 
-const isMonorepoRoot = existsSync("./packages/db");
-
+const baseDir = existsSync("./packages/db") ? "./packages/db" : ".";
 export default defineConfig({
   dialect: "postgresql",
-  schema: isMonorepoRoot ? "./packages/db/src/schema.ts" : "./src/schema.ts",
-  out: isMonorepoRoot ? "./packages/db/drizzle" : "./drizzle",
+  schema: `${baseDir}/src/schema.ts`,
+  out: `${baseDir}/drizzle`,
   dbCredentials: {
     url,
   },
